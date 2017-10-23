@@ -1,0 +1,26 @@
+{
+  "name": "jenkins-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha ./test/test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abhsinh2/jenkins-example.git"
+  },
+  "author": "abhsinh2",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abhsinh2/jenkins-example/issues"
+  },
+  "homepage": "https://github.com/abhsinh2/jenkins-example#readme",
+  "dependencies": {
+    "express": "^4.16.2"
+  },
+  "devDependencies": {
+    "mocha": "^4.0.1",
+    "supertest": "^3.0.0"
+  }
+}
