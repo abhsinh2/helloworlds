@@ -1,0 +1,10 @@
+<aspectj>
+	<aspects>
+		<aspect name="com.abhsinh2.aop.aspects.Log4jLoggerAspect" />
+	</aspects>
+
+	<weaver>
+		<include within="com.abhsinh2.aop.aspects.Log4jLoggerAspect"></include>
+		<include within="org.apache.log4j.xml.DOMConfigurator" />
+	</weaver>
+</aspectj>

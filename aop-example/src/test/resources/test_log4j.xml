@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/" debug="true">
+
+	<appender name="ABCFileAppender" class="org.apache.log4j.RollingFileAppender">
+		<param name="file" value="abc.log" />
+		<param name="append" value="true" />
+		<param name="MaxFileSize" value="10000KB" />
+		<param name="MaxBackupIndex" value="2" />
+		
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="[%d] [%t] [%c{1}] [%-5p] - %m%n" />
+		</layout>
+	</appender>
+	
+	<appender name="XYZFileAppender" class="org.apache.log4j.RollingFileAppender">
+		<param name="file" value="xyz.log" />
+		<param name="append" value="true" />
+		<param name="MaxFileSize" value="10000KB" />
+		<param name="MaxBackupIndex" value="2" />
+		
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="[%d] [%t] [%c{1}] [%-5p] - %m%n" />
+		</layout>
+	</appender>
+	
+	<logger name="com.abhsinh2.abc.test" additivity="false">
+		<level value="debug" />
+		<appender-ref ref="ABCFileAppender" />
+	</logger>
+	
+	<logger name="com.abhsinh2.xyz.test" additivity="false">
+		<level value="debug" />
+		<appender-ref ref="XYZFileAppender" />
+	</logger>
+
+	<root> 
+		<level value="debug" /> 
+		<appender-ref ref="ABCFileAppender" />
+	</root>
+
+</log4j:configuration>
